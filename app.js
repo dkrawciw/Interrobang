@@ -66,3 +66,7 @@ app.get("/logout", function(req, res){
   req.logout();
   res.redirect("/");
 });
+
+app.get('/home', isLoggedIn, function(req, res){
+  res.render('home.ejs');
+});
