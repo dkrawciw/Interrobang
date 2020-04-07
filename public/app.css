@@ -45,3 +45,11 @@ body{
 .hover:hover{
   cursor: pointer;
 }
+.authenticateBtn{
+  color: white;
+  background-color: #CE0000;
+}
+.authenticateBtn:hover{
+  color: white;
+  background-color: #960000;
+}
