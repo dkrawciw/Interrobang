@@ -1,30 +1,47 @@
 body{
   color: white;
-  background-color: #56494E;
+  background-color: #1C1C1C;
 }
 .headDiv{
   position: fixed;
   width: 15%;
-  background-color: #FF4242;
-  padding: 1%;
+  background-color: #CE0000;
+  padding: 1vh;
   text-align: center;
   border-bottom-right-radius: 20px;
   height: 40vh;
+  box-shadow: 0px 0px 0.5vh black;
 }
 .headBtn{
   width: 70%;
-  border: 1px solid #F2FF49;
   color: white;
   margin: 1%;
+  background-color: #1C1C1C;
 }
 .headBtn:hover{
+  background-color: #3A3A3A;
   color: white;
-  background-color: #F2FF49;
-  color: #56494E;
 }
 .bodyDiv{
-  background-color: #DB324D;
+  background-color: #DAE2E5;
+  color: #CE0000;
   text-align: center;
   padding: 1%;
-  box-shadow: 0px 0px 0.5vh black;
+}
+.bodyDiv2{
+  text-align: center;
+  padding: 3%;
+}
+.authenticateDiv{
+  padding: 2%;
+  padding-top: 5%;
+  color: black;
+  margin: auto;
+  width: 27%;
+  background-color: #DAE2E5;
+  border-radius: 20px;
+  height: 60vh;
+}
+.hover:hover{
+  cursor: pointer;
 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/app.css">
+    <style>
+      body{
+
+      }
+    </style>
+  </head>
+  <body>
+    <img class="hover" onclick="window.location='/';" src="https://cdn.discordapp.com/attachments/696791371687657615/696843291857256488/Ping6Borderless.png" width="10%" style="margin-left: 1%;">
+    <div class="authenticateDiv">
+      <h1>SignUp</h1>
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input id="username" name="username" placeholder="Username" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" placeholder="Password" class="form-control">
+        </div>
+        <button class="btn btn-primary">SignUp</button>
+      </form>
+    </div>
+  </body>
+</html>
