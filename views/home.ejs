@@ -1,5 +1,6 @@
 <%- include("partials/header.ejs") %>
   <div class="chatDisplay">
+    <hr>
   </div>
   <div class="chatDiv">
     <form action="#" onsubmit="sendMsg();return false">
@@ -13,11 +14,13 @@
         chatDisplay = document.querySelector('.chatDisplay');
 
     function sendMsg(){
-      socket.emit('msg', inp.value, '<%= currentUser.username %>');
-      inp.value = "";
+      if(inp.value.length != 0){
+        socket.emit('msg', inp.value, '<%= currentUser.username %>');
+        inp.value = "";
+      }
     }
     socket.on('msg', function(msg){
-      chatDisplay.innerHTML += "<h5>" + msg + "</h5>";
+      chatDisplay.innerHTML += "<h6>" + msg + "</h6><hr>";
     });
   </script>
 
