@@ -38,6 +38,10 @@ app.get('/', function(req, res){
   res.render('index.ejs', {currentUser: req.user});
 });
 
+app.get('/home', isLoggedIn, function(req, res){
+  res.render('home.ejs', {currentUser: req.user});
+});
+
 app.get('/login', function(req, res){
   res.render('login.ejs', {currentUser: res.user});
 });
@@ -67,10 +71,6 @@ app.post('/register', function(req, res){
 app.get("/logout", function(req, res){
   req.logout();
   res.redirect("/");
-});
-
-app.get('/home', isLoggedIn, function(req, res){
-  res.render('home.ejs', {currentUser: req.user});
 });
 
 io.on('connection', function(socket){
