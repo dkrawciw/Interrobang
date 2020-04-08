@@ -2,12 +2,18 @@
 <html>
   <head>
     <title>Home Page</title>
+    <link rel="shortcut icon" href="/logo-border.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/app.css">
   </head>
   <body>
     <div class="headDiv">
-      <img class="hover" onclick="window.location='/home';" src="https://cdn.discordapp.com/attachments/696791371687657615/696843291857256488/Ping6Borderless.png" width="70%">
+      <img class="hover" onclick="window.location='/home';" src="/logo.png" width="70%">
+      <% if(!currentUser){ %>
       <button class="btn headBtn" onclick="window.location='/login';">Login</button>
       <button class="btn headBtn" onclick="window.location='/register';">SignUp</button>
+      <% }else{ %>
+        <h2 style="text-decoration: underline;"><%= currentUser.username %></h2>
+        <button class="btn headBtn" onclick="window.location='/logout';">Logout</button>
+      <% } %>
     </div>

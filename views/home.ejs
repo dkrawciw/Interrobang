@@ -1,11 +1,24 @@
 <%- include("partials/header.ejs") %>
+  <div class="chatDisplay">
+  </div>
+  <div class="chatDiv">
+    <form action="#" onsubmit="sendMsg();return false">
+      <input class="chatInp" placeholder="message">
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript">
+    var socket = io(),
+        inp = document.querySelector('input'),
+        chatDisplay = document.querySelector('.chatDisplay');
 
-  <div class="bodyDiv">
-    <h2><strong>INTERROBANG</strong></h2>
-  </div>
-  <div class="bodyDiv2">
-    <h2>MISSION STATEMENT:</h2>
-    <p>Our mission is to create a secure chat server that is owned and managed by people we trust (us).</p>
-  </div>
+    function sendMsg(){
+      socket.emit('msg', inp.value, '<%= currentUser.username %>');
+      inp.value = "";
+    }
+    socket.on('msg', function(msg){
+      chatDisplay.innerHTML += "<h5>" + msg + "</h5>";
+    });
+  </script>
 
 <%- include("partials/footer.ejs") %>

@@ -1,5 +1,7 @@
 var express = require('express'),
     app = express(),
+    http = require('http').createServer(app),
+    io = require('socket.io')(http),
     mongoose = require("mongoose"),
     bodyParser = require("body-parser"),
     passport = require("passport"),
@@ -28,12 +30,12 @@ function isLoggedIn(req, res, next){
   res.redirect('/login');
 }
 
-app.listen(80, function(){
+http.listen(80, function(){
   console.log('Server Running');
 });
 
 app.get('/', function(req, res){
-  res.render('index.ejs');
+  res.render('index.ejs', {currentUser: req.user});
 });
 
 app.get('/login', function(req, res){
@@ -68,5 +70,14 @@ app.get("/logout", function(req, res){
 });
 
 app.get('/home', isLoggedIn, function(req, res){
-  res.render('home.ejs');
+  res.render('home.ejs', {currentUser: req.user});
+});
+
+io.on('connection', function(socket){
+  console.log('Connected');
+
+  socket.on('msg', function(msg, username){
+    console.log(msg);
+    io.emit('msg', username + ": " + msg);
+  });
 });
