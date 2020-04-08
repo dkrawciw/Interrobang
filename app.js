@@ -11,7 +11,7 @@ var express = require('express'),
 mongoose.connect('mongodb://localhost:27017/tsaWebApp', {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.static("views"));
 
 app.use(require("express-session")({
   secret: "p*51nvfy8ZX8NI@M*x7BkUg37BhVpP85v8M3z^%qBcyBrUpLct!^eV6^ejd702c0hcAYe&SM*lEadf9XIxT%IBw0l&yQOSAOn8f",
