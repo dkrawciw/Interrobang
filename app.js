@@ -77,7 +77,6 @@ io.on('connection', function(socket){
   console.log('Connected');
 
   socket.on('msg', function(msg, username){
-    console.log(msg);
     io.emit('msg', username + ": " + msg);
   });
 });
