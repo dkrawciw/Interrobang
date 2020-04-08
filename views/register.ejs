@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="shortcut icon" href="/logo-border.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/app.css">
+  </head>
+  <body>
+    <img class="hover" onclick="window.location='/';" src="/logo.png" width="10%" style="margin-left: 1%;">
+    <div class="authenticateDiv">
+      <h1>SignUp</h1>
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Username" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+        </div>
+        <button class="btn authenticateBtn">SignUp</button>
+      </form>
+    </div>
+  </body>
+</html>
