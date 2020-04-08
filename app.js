@@ -30,7 +30,7 @@ function isLoggedIn(req, res, next){
   res.redirect('/login');
 }
 
-http.listen(80, function(){
+http.listen(50002, function(){
   console.log('Server Running');
 });
 
