@@ -1,4 +1,4 @@
-<%- include("partials/header.ejs") %>
+<%- include("partials/loggedInHeader.ejs") %>
   <div class="chatDisplay">
     <hr>
   </div>
@@ -21,7 +21,7 @@
     }
     socket.on('msg', function(msg){
       chatDisplay.innerHTML += "<h6>" + msg + "</h6><hr>";
-    });
+    });      
   </script>
 
-<%- include("partials/footer.ejs") %>
+<%- include("partials/loggedInFooter.ejs") %>

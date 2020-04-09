@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="shortcut icon" href="/logo-border.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/app.css">
+  </head>
+  <body>
+    <div class="headDiv2">
+      <img class="hover" onclick="window.location='/home';" src="/logo.png" width="30%">
+      <div class="chatGroups">
+        <hr style="border: 0.5px solid white; background-color: white; width: 90%;">
+        <div class="chatSelection selectedChat">
+          <h4>General</h4>
+        </div>
+        <div class="chatSelection">
+          <h4>INTERROBANG</h4>
+        </div>
+        <hr style="border: 0.5px solid white; background-color: white; width: 90%;">
+      </div>
+      <div class="authenticateHeadDiv">
+        <hr style="border: 0.5px solid white; background-color: white; width: 90%;">
+        <h3 style="text-decoration: underline;"><%= currentUser.username %></h3>
+        <button class="btn headBtn" onclick="window.location='/logout';">Logout</button>
+      </div>
+    </div>
+    <div class="chatInfo">
+      <hr style="width: 90%;">
+      <h5>Online</h5>
+      <hr style="width: 90%;">
+    </div>
