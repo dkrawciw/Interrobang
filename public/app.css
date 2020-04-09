@@ -12,44 +12,6 @@ body{
   height: 40vh;
   box-shadow: 0px 0px 0.5vh black;
 }
-.headDiv2{
-  position: fixed;
-  width: 15%;
-  background-color: #CE0000;
-  height: 100vh;
-  box-shadow: 0px 0px 0.5vh black;
-}
-.chatGroups{
-  position: absolute;
-  width: 100%;
-}
-.authenticateHeadDiv{
-  position: relative;
-  margin-top: 75vh;
-  width: 100%;
-  text-align: center;
-}
-.chatSelection{
-  border: 1px solid #CE0000;
-  padding: 4%;
-  width: 100%;
-  transition: all 0.3s;
-}
-.chatSelection:hover{
-  background-color: #CE4E4E;
-  border: 1px solid #CE4E4E;
-  cursor: pointer;
-}
-.selectedChat{
-  border-left-color: white;
-}
-.chatInfo{
-  width: 15%;
-  text-align: center;
-  position: fixed;
-  margin-left: 85%;
-  padding: 1vh;
-}
 .headBtn{
   width: 70%;
   color: white;
