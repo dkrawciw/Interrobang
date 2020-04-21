@@ -11,6 +11,7 @@ body{
   border-bottom-right-radius: 20px;
   height: 40vh;
   box-shadow: 0px 0px 0.5vh black;
+  overflow: hidden;
 }
 .headBtn{
   width: 70%;
@@ -83,9 +84,19 @@ body{
   padding: 3%;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  border: 0.5px solid #CE0000;
   min-height: 90vh;
   padding-bottom: 15vh;
+}
+.chatMsg{
+  padding: 1%;
+  margin-left: 10%;
+  word-wrap: break-word;
+}
+.profilePic{
+  width: 5%;
+  position: absolute;
+  border-radius: 100%;
+  background-color: #CE0000;
 }
 hr{
   width: 100%;
