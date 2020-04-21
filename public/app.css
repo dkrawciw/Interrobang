@@ -91,13 +91,13 @@ body{
   padding: 1%;
   margin-left: 10%;
   word-wrap: break-word;
+  margin-bottom: 3%;
 }
 .profilePic{
   width: 5%;
   position: absolute;
   border-radius: 100%;
   background-color: #CE0000;
-  margin-bottom: 5%;
 }
 hr{
   width: 100%;
