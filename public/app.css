@@ -115,3 +115,6 @@ hr{
   border: 4px solid #CE0000;
   cursor: pointer;
 }
+.newRoomBtn:active{
+  background-color: #CE0000;
+}
