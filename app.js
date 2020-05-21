@@ -12,11 +12,11 @@ var express = require('express'),
 var connection = mysql.createConnection({
   host    : '127.0.0.1',
   user    : 'root',
-  password: 'password',
+  password: 'xD#X3227l!7K&LW4k4av',
   database: 'interrobang_db',
   port    : '3306'
 });
-//xD#X3227l!7K&LW4k4av
+
 mongoose.connect('mongodb://localhost:27017/interrobang_db', {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
