@@ -7,7 +7,7 @@ var express = require('express'),
     passport = require("passport"),
     LocalStrategy = require("passport-local"),
     User = require('./models/user.js'),
-    mySql = require('mysql');
+    mysql = require('mysql');
 
 var connection = mysql.createConnection({
   host    : '127.0.0.1',
