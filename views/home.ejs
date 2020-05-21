@@ -1,27 +1,11 @@
 <%- include("partials/header.ejs") %>
-  <div class="chatDisplay">
-    <hr>
-  </div>
-  <div class="chatDiv">
-    <form action="#" onsubmit="sendMsg();return false">
-      <input class="chatInp" placeholder="message">
-    </form>
-  </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script type="text/javascript">
-    var socket = io(),
-        inp = document.querySelector('input'),
-        chatDisplay = document.querySelector('.chatDisplay');
 
-    function sendMsg(){
-      if(inp.value.length != 0){
-        socket.emit('msg', inp.value, '<%= currentUser.username %>');
-        inp.value = "";
-      }
-    }
-    socket.on('msg', function(msg){
-      chatDisplay.innerHTML += "<img src='/userPic.png' class='profilePic'><p class='chatMsg'>" + msg + "</p><br><h6 style='font-size: 10px;'>" + new Date().getMonth() + "/" + new Date().getDate() + "/" + new Date().getFullYear() + " @ " + new Date().getHours() + ":" + new Date().getMinutes() + "</h6><hr>";
-    });
-  </script>
+  <div class="">
+    <ul class="list-group">
+      <% for(var x = chatRoom.length; x >= 0; x--){ %>
+        <li class="list-group-item list-group-item-action" onclick="window.location='/home/chat/<%= chatRoom[x].room_id %>';"><%= chatRoom[x].title %></li>
+      <% } %>
+    </ul>
+  </div>
 
 <%- include("partials/footer.ejs") %>

@@ -6,9 +6,18 @@ var express = require('express'),
     bodyParser = require("body-parser"),
     passport = require("passport"),
     LocalStrategy = require("passport-local"),
-    User = require('./models/user.js');
+    User = require('./models/user.js'),
+    mySql = require('mysql');
 
-mongoose.connect('mongodb://localhost:27017/tsaWebApp', {useNewUrlParser: true});
+var connection = mysql.createConnection({
+  host    : '127.0.0.1',
+  user    : 'root',
+  password: 'xD#X3227l!7K&LW4k4av',
+  database: 'interrobang_db',
+  port    : '3306'
+});
+
+mongoose.connect('mongodb://localhost:27017/interrobang_db', {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
@@ -39,7 +48,10 @@ app.get('/', function(req, res){
 });
 
 app.get('/home', isLoggedIn, function(req, res){
-  res.render('home.ejs', {currentUser: req.user});
+  connection.query('SELECT chat_rooms.room_name AS title, chat_rooms.id AS room_id FROM users JOIN room_members ON users.id = room_members.user_id JOIN chat_rooms ON room_members.room_id = chat_rooms.id WHERE users.username = "' + req.user.username + '";', function(err, results, fields){
+    if(err) throw err;
+    res.render('home.ejs', {currentUser: req.user,chatRoom: results});
+  });
 });
 
 app.get('/login', function(req, res){
@@ -58,6 +70,16 @@ app.get('/register', function(req, res){
 app.post('/register', function(req, res){
   var newUser = new User({username: req.body.username});
   User.register(newUser, req.body.password, function(err, user){
+    var q = {
+      username: req.body.username,
+      f_name: req.body.f_name,
+      l_name: req.body.l_name
+    };
+    connection.query('INSERT INTO users SET ?', q, function(err, results){
+      if(err){
+        throw err;
+      }
+    });
     if(err){
       console.log(err);
       return res.render("/register");
