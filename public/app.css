@@ -107,7 +107,7 @@ hr{
 .newRoomBtn{
   padding: 1%;
   width: 10%;
-  border: 3px solid #CE0000;
+  border: 2px solid #CE0000;
   border-radius: 100%;
   transition: all 0.3s;
 }
