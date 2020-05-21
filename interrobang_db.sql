@@ -23,8 +23,10 @@ CREATE TABLE chat_rooms(
 );
 
 CREATE TABLE room_members(
+  id INT NOT NULL AUTO_INCREMENT,
   room_id INT NOT NULL,
   user_id INT NOT NULL,
+  PRIMARY KEY(id),
   FOREIGN KEY(room_id) REFERENCES chat_rooms(id),
   FOREIGN KEY(user_id) REFERENCES users(id)
 );
@@ -35,5 +37,5 @@ CREATE TABLE chat_messages(
   message VARCHAR(400) NOT NULL,
   time_chatted TIMESTAMP DEFAULT NOW(),
   PRIMARY KEY(id),
-  FOREIGN KEY(member_id) REFERENCES room_members()
+  FOREIGN KEY(member_id) REFERENCES room_members(id)
 );
