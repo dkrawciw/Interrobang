@@ -112,7 +112,7 @@ hr{
   transition: all 0.3s;
 }
 .newRoomBtn:hover{
-  border: 4px solid #CE0000;
+  border: 2px solid #CE0000;
   cursor: pointer;
 }
 .newRoomBtn:active{
