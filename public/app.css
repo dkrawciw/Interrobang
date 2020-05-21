@@ -114,7 +114,6 @@ hr{
 }
 .newRoomBtn:hover{
   margin: none;
-  width: 11%;
   cursor: pointer;
 }
 .newRoomBtn:active{
