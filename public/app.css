@@ -113,8 +113,8 @@ hr{
   transition: all 0.3s;
 }
 .newRoomBtn:hover{
-  margin: 0%;
-  padding: 2%;
+  margin: none;
+  width: 11%;
   cursor: pointer;
 }
 .newRoomBtn:active{
