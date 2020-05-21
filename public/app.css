@@ -107,12 +107,13 @@ hr{
 .newRoomBtn{
   padding: 1%;
   width: 10%;
-  border: 1px solid #CE0000;
+  border: 3px solid #CE0000;
   border-radius: 100%;
   transition: all 0.3s;
 }
 .newRoomBtn:hover{
   padding: 0.75%;
+  border: 1px solid #CE0000;
   cursor: pointer;
 }
 .newRoomBtn:active{
