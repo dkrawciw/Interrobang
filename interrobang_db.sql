@@ -25,7 +25,7 @@ CREATE TABLE chat_rooms(
 CREATE TABLE room_members(
   room_id INT NOT NULL,
   user_id INT NOT NULL,
-  FOREIGN KEY(room_id) REFERENCES chatRooms(id),
+  FOREIGN KEY(room_id) REFERENCES chat_rooms(id),
   FOREIGN KEY(user_id) REFERENCES users(id)
 );
 
