@@ -122,5 +122,7 @@ hr{
   display: none;
   background-color: #3A3A3A;
   position: absolute;
-
+  width: 35%;
+  padding: 1%;
+  border-radius: 10px;
 }
