@@ -1,7 +1,8 @@
 <%- include("partials/header.ejs") %>
 
   <div class="chatDisplay">
-    <button class="btn btn-danger redStyleBtn">New Chat</button>
+    <img class="newRoomBtn" src="newProjectIcon.png" onclick="window.location='/home';">
+    <img class="newRoomBtn" src="addFriend.png" onclick="window.location='/home';">
     <ul class="list-group">
       <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
         <li class="list-group-item list-group-item-action" onclick="window.location='/home/chat/<%= chatRoom[x].room_id %>';"><%= chatRoom[x].title %></li>
