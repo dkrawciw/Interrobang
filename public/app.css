@@ -113,7 +113,7 @@ hr{
 }
 .newRoomBtn:hover{
   cursor: pointer;
-  background-color: #C33149;
+  background-color: #B50000;
 }
 .newRoomBtn:active{
   background-color: #FF3C38;
