@@ -74,9 +74,6 @@ body{
 .chatInp:focus{
   border-radius: 12px;
 }
-::placeholder{
-  color: #F2F2F2;
-}
 .chatDisplay{
   width: 70%;
   margin: 0 auto;
@@ -125,4 +122,7 @@ hr{
   width: 35%;
   padding: 2%;
   border-radius: 10px;
+}
+input::placeholder{
+  color: #F2F2F2;
 }
