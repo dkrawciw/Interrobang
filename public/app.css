@@ -120,5 +120,7 @@ hr{
 }
 #newRoomDiv{
   display: none;
-  background-color: #DAE2E5;
+  background-color: #3A3A3A;
+  position: absolute;
+
 }
