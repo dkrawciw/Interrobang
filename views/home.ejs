@@ -1,12 +1,21 @@
 <%- include("partials/header.ejs") %>
 
   <div class="chatDisplay">
-    <img class="newRoomBtn" src="newProjectIcon.png" onclick="window.location='/home/newRoom';">
+    <img class="newRoomBtn" src="newProjectIcon.png" id="newRoom">
+    <div id="newRoomDiv">
+      <form action="/home/newRoom" method="POST">
+        <div class="form-group">
+          <label for="rName">Title:</label>
+          <input name="name" type="text" id="rName" placeholder="Room Name" class="form-control">
+        </div>
+        <button class="btn authenticateBtn">Create</button>
+      </form>
+    </div>
     <ul class="list-group">
       <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
         <li class="list-group-item list-group-item-action" onclick="window.location='/home/chat/<%= chatRoom[x].room_id %>';"><%= chatRoom[x].title %></li>
       <% } %>
     </ul>
   </div>
-
+  <script type="text/javascript" src="/newRoom.js"></script>
 <%- include("partials/footer.ejs") %>

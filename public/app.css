@@ -118,3 +118,7 @@ hr{
 .newRoomBtn:active{
   background-color: #D8271E;
 }
+#newRoomDiv{
+  display: none;
+  background-color: #DAE2E5;
+}
