@@ -75,7 +75,7 @@ body{
   border-radius: 12px;
 }
 ::placeholder{
-  color: #DAE2E5;
+  color: #F2F2F2;
 }
 .chatDisplay{
   width: 70%;
