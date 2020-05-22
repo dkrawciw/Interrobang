@@ -14,20 +14,19 @@ CREATE TABLE users(
 );
 
 CREATE TABLE chat_rooms(
-  id INT NOT NULL AUTO_INCREMENT,
-  host_id INT NOT NULL,
   room_name VARCHAR(100) NOT NULL,
+  host_id INT NOT NULL,
   date_created TIMESTAMP DEFAULT NOW(),
-  PRIMARY KEY(id),
+  PRIMARY KEY(room_name),
   FOREIGN KEY(host_id) REFERENCES users(id)
 );
 
 CREATE TABLE room_members(
   id INT NOT NULL AUTO_INCREMENT,
-  room_id INT NOT NULL,
+  room_name VARCHAR(100) NOT NULL,
   user_id INT NOT NULL,
   PRIMARY KEY(id),
-  FOREIGN KEY(room_id) REFERENCES chat_rooms(id),
+  FOREIGN KEY(room_name) REFERENCES chat_rooms(room_name),
   FOREIGN KEY(user_id) REFERENCES users(id)
 );
 

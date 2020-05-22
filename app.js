@@ -48,7 +48,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/home', isLoggedIn, function(req, res){
-  connection.query('SELECT chat_rooms.room_name AS title, chat_rooms.id AS room_id FROM users JOIN room_members ON users.id = room_members.user_id JOIN chat_rooms ON room_members.room_id = chat_rooms.id WHERE users.username = "' + req.user.username + '";', function(err, results, fields){
+  connection.query('SELECT room_name FROM users JOIN room_members ON room_members.user_id = users.id JOIN chat_rooms ON chat_rooms.room_name = room_members.room_name WHERE users.username = "' + req.user.username + '";', function(err, results, fields){
     if(err) throw err;
     res.render('home.ejs', {currentUser: req.user,chatRoom: results});
   });
@@ -95,10 +95,20 @@ app.get("/logout", function(req, res){
   res.redirect("/");
 });
 
-app.get('/home/newRoom', isLoggedIn, function(req, res){
-  res.render('newRoom.ejs', {currentUser: req.user});
-});
 app.post('/home/newRoom', isLoggedIn, function(req, res){
+  connection.query('SELECT id FROM users WHERE users.username = "' + req.user.username + '";', function(uErr, uResults, uFields){
+    if(uErr) throw uErr;
+    var q = {
+      room_name: req.body.name,
+      host_id: uResults[0].id
+    };
+    var q2 = {
+      room_name: req.body.name,
+      user_id: uResults[0].id
+    };
+    connection.query('INSERT INTO chat_rooms SET ?', q);
+    connection.query('INSERT INTO room_members SET ?', q2);
+  });
   res.redirect('/home');
 });
 
