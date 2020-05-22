@@ -119,3 +119,8 @@ hr{
 .newRoomBtn:active{
   background-color: #CE0000;
 }
+.redStyleBtn{
+  color: white;
+  background-color: #CE0000;
+  border-color: #CE0000;
+}
