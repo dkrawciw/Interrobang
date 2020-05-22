@@ -112,8 +112,9 @@ hr{
   transition: all 0.3s;
 }
 .newRoomBtn:hover{
-=  cursor: pointer;
+  cursor: pointer;
+  background-color: #C33149;
 }
 .newRoomBtn:active{
-  background-color: #C33149;
+  background-color: #FF3C38;
 }
