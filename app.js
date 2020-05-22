@@ -48,7 +48,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/home', isLoggedIn, function(req, res){
-  connection.query('SELECT room_name FROM users JOIN room_members ON room_members.user_id = users.id JOIN chat_rooms ON chat_rooms.room_name = room_members.room_name WHERE users.username = "' + req.user.username + '";', function(err, results, fields){
+  connection.query('SELECT chat_rooms.room_name AS room_name FROM users JOIN room_members ON room_members.user_id = users.id JOIN chat_rooms ON chat_rooms.room_name = room_members.room_name WHERE users.username = "' + req.user.username + '";', function(err, results, fields){
     if(err) throw err;
     res.render('home.ejs', {currentUser: req.user,chatRoom: results});
   });
