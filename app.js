@@ -95,6 +95,13 @@ app.get("/logout", function(req, res){
   res.redirect("/");
 });
 
+app.get('/home/newRoom', isLoggedIn, function(req, res){
+  res.render('newRoom.ejs', {currentUser: req.user});
+});
+app.post('/home/newRoom', isLoggedIn, function(req, res){
+
+});
+
 io.on('connection', function(socket){
   console.log('Connected');
 

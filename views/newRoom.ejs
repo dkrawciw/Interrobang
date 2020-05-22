@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="chatDisplay">
+    <form action="/home/newRoom" method="POST">
+      <div class="form-group">
+        <label for="rName">Room Name:</label>
+        <input name="name" type="text" id="rName" placeholder="Room Name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="rdescription">Description:</label>
+        <input name="description" type="text" id="rDescription" placeholder="Description" class="form-control">
+      </div>
+      <button class="btn authenticateBtn">Create</button>
+    </form>
+  </div>
+
+<%- include("partials/footer.ejs") %>
