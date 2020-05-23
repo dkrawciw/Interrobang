@@ -145,7 +145,12 @@ input::placeholder{
   text-align: left;
   margin: none;
   width: 100%;
+  transition: all 0.3s;
 }
+.roomOptions:hover{
+  background-color: #D8271E;
+}
+
 ::-webkit-scrollbar {
   width: 7px;
   background-color: none;
