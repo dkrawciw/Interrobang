@@ -142,4 +142,5 @@ input::placeholder{
 .roomOptions{
   border: 1px solid #CE0000;
   border-left-color: white;
+  text-align: right;
 }

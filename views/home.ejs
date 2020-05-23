@@ -2,7 +2,7 @@
   <div class="chatSelectionDiv">
     <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
       <div class="roomOptions" onclick="window.location='/home/chat/<%= chatRoom[x].room_name %>';">
-        <h3><%= chatRoom[x].room_name %></h3>
+        <h4><%= chatRoom[x].room_name %></h4>
       </div>
     <% } %>
   </div>
