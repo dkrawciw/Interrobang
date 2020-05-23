@@ -12,6 +12,7 @@ body{
   height: 40vh;
   box-shadow: 0px 0px 0.5vh black;
   overflow: hidden;
+  font-family: 'Share Tech Mono', monospace;
 }
 .headBtn{
   width: 70%;
