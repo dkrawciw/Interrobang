@@ -146,3 +146,7 @@ input::placeholder{
   padding: 3%;
   margin: none;
 }
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
