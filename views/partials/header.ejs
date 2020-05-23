@@ -14,7 +14,7 @@
       <button class="btn headBtn" onclick="window.location='/login';">Log In</button>
       <button class="btn headBtn" onclick="window.location='/register';">Sign Up</button>
       <% }else{ %>
-        <h3 style="text-decoration: underline;"><%= currentUser.username %></h3>
+        <h4><%= currentUser.username %></h4>
         <button class="btn headBtn" onclick="window.location='/logout';">Logout</button>
       <% } %>
     </div>
