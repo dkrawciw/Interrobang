@@ -38,7 +38,7 @@
   <!-- End of add person button -->
 
 
-  <div class="chatDisplay">
+  <div class="chatDisplay" id="realChatDisplay">
     <hr>
   </div>
 
@@ -47,7 +47,7 @@
   <script type="text/javascript">
     var socket = io(),
         inp = document.querySelector('#chatInput'),
-        chatDisplay = document.querySelector('.chatDisplay');
+        chatDisplay = document.querySelector('#realChatDisplay');
 
     function sendMsg(){
       if(inp.value.length != 0){
