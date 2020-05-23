@@ -17,3 +17,12 @@
         <button class="btn headBtn" onclick="window.location='/logout';">Logout</button>
       <% } %>
     </div>
+    <% if(currentUser){ %>
+      <div class="chatSelectionDiv">
+        <ul class="list-group">
+          <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
+            <li class="list-group-item list-group-item-action" onclick="window.location='/home/chat/<%= chatRoom[x].room_name %>';"><%= chatRoom[x].room_name %></li>
+          <% } %>
+        </ul>
+      </div>
+    <% } %>
