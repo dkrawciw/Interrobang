@@ -145,10 +145,10 @@ input::placeholder{
   text-align: left;
   margin: none;
   width: 100%;
-  transition: underline 0.3s;
+  transition: text-decoration 0.3s ease;
 }
 .roomOptions:hover{
-  text-decoration: underline;
+  text-decoration: underline solid;
   cursor: pointer;
 }
 
