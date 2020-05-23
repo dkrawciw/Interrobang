@@ -59,7 +59,8 @@ body{
   text-align: center;
   position: fixed;
   margin-top: 90vh;
-  margin: 0 auto;
+  margin-right: 0 auto;
+  margin-left: 0 auto;
   height: 10vh;
 }
 .chatInp{
