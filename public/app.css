@@ -141,8 +141,9 @@ input::placeholder{
 }
 .roomOptions{
   border: 1px solid #CE0000;
-  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
   text-align: left;
-  padding: 1%;
+  padding: 3%;
   margin: none;
 }
