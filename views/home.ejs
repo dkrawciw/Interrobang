@@ -1,6 +1,6 @@
 <%- include("partials/header.ejs") %>
   <div class="chatSelectionDiv">
-    <ul class="list-group list-group-flush ">
+    <ul class="list-group list-group-flush">
       <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
         <li class="list-group-item" onclick="window.location='/home/chat/<%= chatRoom[x].room_name %>';"><%= chatRoom[x].room_name %></li>
       <% } %>
