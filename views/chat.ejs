@@ -1,4 +1,7 @@
 <%- include("partials/header.ejs") %>
+  <form action="/home/deleteRoom/<%= roomName %>" method="POST">
+    <button class="btn btn-warning">Delete Room</button>
+  </form>
   <div class="chatDiv">
     <form action="#" onsubmit="sendMsg();return false">
       <div class="input-group mb-3">
@@ -58,6 +61,10 @@
     socket.on('msg', function(msg){
       chatDisplay.innerHTML += "<img src='/userPic.png' class='profilePic'><p class='chatMsg'>" + msg + "</p><br><h6 style='font-size: 10px;'>" + new Date().getMonth() + "/" + new Date().getDate() + "/" + new Date().getFullYear() + " @ " + new Date().getHours() + ":" + new Date().getMinutes() + "</h6><hr>";
     });
+
+    const user = "<%= currentUser.username %>";
+
+    socket.emit('active user');
   </script>
 
 <%- include("partials/footer.ejs") %>
