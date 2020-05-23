@@ -22,6 +22,9 @@
   <!-- Add person button -->
   <div class="chatDisplay">
     <img class="newRoomBtn" width="5%" src="/addFriend.png" id="newRoom">
+    <form action="/home/deleteRoom/<%= roomName %>" method="POST">
+      <button class="btn btn-warning">Delete Room</button>
+    </form>
     <div id="newRoomDiv">
       <h2>Add a Friend</h2>
       <form action="/home/chat/:<%= roomName %>/addFriend" method="POST">
@@ -36,9 +39,6 @@
   </div>
   <script type="text/javascript" src="/newRoom.js"></script>
   <!-- End of add person button -->
-  <form action="/home/deleteRoom/<%= roomName %>" method="POST">
-    <button class="btn btn-warning">Delete Room</button>
-  </form>
 
   <div class="chatDisplay" id="realChatDisplay">
     <hr>
