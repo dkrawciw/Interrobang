@@ -12,8 +12,8 @@
   <div class="chatSelectionDiv">
     <hr>
     <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
-      <div class="roomOptions" onclick="window.location='/home/chat/<%= chatRoom[x].room_name %>';" <% if(roomName == chatRoom[x].room_name){ %> style="border-left-color: white;" <% } %>>
-        <h4><%= chatRoom[x].room_name %></h4>
+      <div class="roomOptions" onclick="window.location='/home/chat/<%= chatRoom[x].room_name %>';">
+        <h4 <% if(roomName == chatRoom[x].room_name){ %> style="border-left-color: white;" <% } %>><%= chatRoom[x].room_name %></h4>
         <hr>
       </div>
     <% } %>
