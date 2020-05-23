@@ -145,10 +145,11 @@ input::placeholder{
   text-align: left;
   margin: none;
   width: 100%;
-  transition: all 0.3s;
+  transition: underline 0.3s;
 }
 .roomOptions:hover{
   text-decoration: underline;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
