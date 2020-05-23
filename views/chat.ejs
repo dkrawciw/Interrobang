@@ -1,7 +1,4 @@
 <%- include("partials/header.ejs") %>
-  <form action="/home/deleteRoom/<%= roomName %>" method="POST">
-    <button class="btn btn-warning">Delete Room</button>
-  </form>
   <div class="chatDiv">
     <form action="#" onsubmit="sendMsg();return false">
       <div class="input-group mb-3">
@@ -39,7 +36,9 @@
   </div>
   <script type="text/javascript" src="/newRoom.js"></script>
   <!-- End of add person button -->
-
+  <form action="/home/deleteRoom/<%= roomName %>" method="POST">
+    <button class="btn btn-warning">Delete Room</button>
+  </form>
 
   <div class="chatDisplay" id="realChatDisplay">
     <hr>
