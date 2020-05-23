@@ -152,7 +152,6 @@ input::placeholder{
   text-decoration: underline solid;
   cursor: pointer;
 }
-
 ::-webkit-scrollbar {
   width: 7px;
   background-color: none;

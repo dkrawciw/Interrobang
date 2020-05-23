@@ -8,6 +8,26 @@
       </div>
     <% } %>
   </div>
+
+  <!-- Add person button -->
+  <div class="chatDisplay">
+    <img class="newRoomBtn" src="addFriend.png" id="newRoom" style="width: 5%;">
+    <div id="newRoomDiv">
+      <h2>Add a Friend</h2>
+      <form action="/home/chat/:<%= roomName %>/addFriend" method="POST">
+        <div class="input-group mb-3 input-group-lg">
+          <input type="text" class="form-control"  name="name" aria-label="Recipient's username" aria-describedby="button-addon2" id="rName">
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" type="submit" id="button-addon2">Add</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript" src="/newRoom.js"></script>
+  <!-- End of add person button -->
+
+
   <div class="chatDisplay">
     <hr>
   </div>
