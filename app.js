@@ -116,6 +116,24 @@ app.post('/home/newRoom', isLoggedIn, function(req, res){
   res.redirect('/home');
 });
 
+app.get('/home/room/:roomName', isLoggedIn, function(req, res){
+  res.render('chat.ejs', {currentUser: req.user});
+});
+
+app.post('/home/deleteRoom/:roomName', isLoggedIn, function(req, res){
+  connection.query('SELECT id FROM users WHERE username = "' + req.user.username + '";', function(err, results, fields){
+    if(err) throw err;
+    connection.query('SELECT host_id FROM chat_rooms WHERE room_name = "' + req.params.roomName + '";', function(rErr, rResults, rFields){
+      if(rErr) throw rErr;
+      if(rResults[0].host_id = results[0].id){
+        connection.query('DELETE FROM chat_rooms WHERE room_name = ' + req.params.roomName + ';');
+        connection.query('DELETE FROM room_members WHERE room_name = ' + req.params.roomName + ';');
+      }
+    });
+  });
+  res.redirect('/home');
+});
+
 io.on('connection', function(socket){
   console.log('Connected');
 

@@ -1,4 +1,13 @@
 <%- include("partials/header.ejs") %>
+  <div class="chatSelectionDiv">
+    <hr>
+    <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
+      <div class="roomOptions" onclick="window.location='/home/chat/<%= chatRoom[x].room_name %>';">
+        <h4><%= chatRoom[x].room_name %></h4>
+        <hr>
+      </div>
+    <% } %>
+  </div>
   <div class="chatDisplay">
     <hr>
   </div>
