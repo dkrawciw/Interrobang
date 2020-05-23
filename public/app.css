@@ -140,5 +140,6 @@ input::placeholder{
   font-family: 'Share Tech Mono', monospace;
 }
 ul{
-  color: black;
+  background-color: #CE0000;
+  border-color: white;
 }
