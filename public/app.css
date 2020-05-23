@@ -58,6 +58,7 @@ body{
   width: 70%;
   text-align: center;
   position: fixed;
+  margin: 0 auto;
   height: 10vh;
   margin-top: 80vh;
 }
