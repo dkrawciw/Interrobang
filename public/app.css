@@ -57,13 +57,13 @@ body{
 .chatDiv{
   width: 70%;
   text-align: center;
-  position: fixed;
+  position: relative;
   margin: auto;
   padding: 3%;
   margin-top: 80vh;
   margin-left: 15%;
   height: 10vh;
-  z-index:99;
+  z-index: 99;
 }
 .chatInp{
   padding: 0.7%;
