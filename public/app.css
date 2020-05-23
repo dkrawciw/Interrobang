@@ -142,6 +142,7 @@ input::placeholder{
   font-family: 'Share Tech Mono', monospace;
 }
 .roomOptions{
+  text-decoration: underline solid transparent;
   text-align: left;
   margin: none;
   width: 100%;
