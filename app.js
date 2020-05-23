@@ -106,7 +106,11 @@ app.post('/home/newRoom', isLoggedIn, function(req, res){
       room_name: req.body.name,
       user_id: uResults[0].id
     };
-    connection.query('INSERT INTO chat_rooms SET ?', q);
+    connection.query('INSERT INTO chat_rooms SET ?', q, function(err){
+      if(err){
+        connection.end();
+      }
+    });
     connection.query('INSERT INTO room_members SET ?', q2);
   });
   res.redirect('/home');
