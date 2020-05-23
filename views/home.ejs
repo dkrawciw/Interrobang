@@ -10,11 +10,13 @@
     <img class="newRoomBtn" src="newProjectIcon.png" id="newRoom">
     <div id="newRoomDiv">
       <form action="/home/newRoom" method="POST">
-        <div class="form-group">
+        <div class="input-group mb-3">
           <label for="rName">Create New Room</label>
-          <input name="name" type="text" id="rName" class="form-control chatInp" style="text-align: center; float: left; position: absolute;">
+          <input type="text" class="form-control"  name="name" aria-label="Recipient's username" aria-describedby="button-addon2" id="rName">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Create</button>
+          </div>
         </div>
-        <button class="btn authenticateBtn" style="float: right;">Create</button>
       </form>
     </div>
   </div>

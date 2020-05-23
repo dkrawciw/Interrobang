@@ -136,4 +136,5 @@ input::placeholder{
   margin-top: 40vh;
   height: 60vh;
   overflow: hidden;
+  border-top-right-radius: 20px;
 }
