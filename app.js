@@ -117,7 +117,10 @@ app.post('/home/newRoom', isLoggedIn, function(req, res){
 });
 
 app.get('/home/chat/:roomName', isLoggedIn, function(req, res){
-  res.render('chat.ejs', {currentUser: req.user});
+  connection.query('SELECT chat_rooms.room_name AS room_name FROM users JOIN room_members ON room_members.user_id = users.id JOIN chat_rooms ON chat_rooms.room_name = room_members.room_name WHERE users.username = "' + req.user.username + '";', function(err, results, fields){
+    if(err) throw err;
+    res.render('chat.ejs', {currentUser: req.user,chatRoom: results});
+  });
 });
 
 app.post('/home/deleteRoom/:roomName', isLoggedIn, function(req, res){
