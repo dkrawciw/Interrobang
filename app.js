@@ -116,7 +116,7 @@ app.post('/home/newRoom', isLoggedIn, function(req, res){
   res.redirect('/home');
 });
 
-app.get('/home/room/:roomName', isLoggedIn, function(req, res){
+app.get('/home/chat/:roomName', isLoggedIn, function(req, res){
   res.render('chat.ejs', {currentUser: req.user});
 });
 
