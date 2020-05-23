@@ -97,8 +97,8 @@ body{
 }
 hr{
   width: 100%;
-  border: 0.5px solid #CE0000;
-  background-color: #CE0000;
+  border: 0.5px solid white;
+  background-color: white;
 }
 .newRoomBtn{
   padding: 1%;
@@ -140,9 +140,6 @@ input::placeholder{
   font-family: 'Share Tech Mono', monospace;
 }
 .roomOptions{
-  border: 1px solid #CE0000;
-  border-top-color: white;
-  border-bottom-color: white;
   text-align: left;
   padding: 3%;
   margin: none;
