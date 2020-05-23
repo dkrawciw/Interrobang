@@ -139,3 +139,7 @@ input::placeholder{
 #newRoomDiv{
   font-family: 'Share Tech Mono', monospace;
 }
+.roomOptions{
+  border: 1px solid #CE0000;
+  border-left-color: white;
+}
