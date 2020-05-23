@@ -8,7 +8,6 @@ body{
   background-color: #CE0000;
   padding: 1vh;
   text-align: center;
-  border-bottom-right-radius: 20px;
   height: 40vh;
   box-shadow: 0px 0px 0.5vh black;
   overflow: hidden;
@@ -137,7 +136,6 @@ input::placeholder{
   margin-top: 40vh;
   height: 60vh;
   overflow: hidden;
-  border-top-right-radius: 20px;
 }
 #newRoomDiv{
   font-family: 'Share Tech Mono', monospace;
