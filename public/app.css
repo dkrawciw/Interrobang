@@ -148,7 +148,7 @@ input::placeholder{
   transition: all 0.3s;
 }
 .roomOptions:hover{
-  background-color: #D8271E;
+  text-decoration: underline;
 }
 
 ::-webkit-scrollbar {
