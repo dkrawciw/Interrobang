@@ -1,4 +1,14 @@
 <%- include("partials/header.ejs") %>
+  <div class="chatDiv">
+    <form action="#" onsubmit="sendMsg();return false">
+      <div class="input-group mb-3">
+        <input id="chatInput" type="text" class="form-control chatInp" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-danger" type="button" id="button-addon2">Send</button>
+        </div>
+      </div>
+    </form>
+</div>
   <div class="chatSelectionDiv">
     <hr>
     <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
@@ -30,16 +40,6 @@
 
   <div class="chatDisplay">
     <hr>
-  </div>
-  <div class="chatDiv">
-    <form action="#" onsubmit="sendMsg();return false">
-      <div class="input-group mb-3">
-        <input id="chatInput" type="text" class="form-control chatInp" aria-describedby="button-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-danger" type="button" id="button-addon2">Send</button>
-        </div>
-      </div>
-    </form>
   </div>
 
   <script src="/socket.io/socket.io.js"></script>
