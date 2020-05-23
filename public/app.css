@@ -121,6 +121,7 @@ hr{
   width: 35%;
   padding: 2%;
   border-radius: 10px;
+  box-shadow: 0px 0px 0.5vh black;
 }
 input::placeholder{
   color: #F2F2F2;

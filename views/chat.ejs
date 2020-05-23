@@ -33,15 +33,20 @@
   </div>
   <div class="chatDiv">
     <form action="#" onsubmit="sendMsg();return false">
-      <input class="chatInp" placeholder="message">
+      <div class="input-group mb-3">
+        <input id="chatInp" type="text" class="form-control" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-danger" type="button" id="button-addon2">Send</button>
+        </div>
+      </div>
     </form>
   </div>
-  
+
   <script src="/socket.io/socket.io.js"></script>
 
   <script type="text/javascript">
     var socket = io(),
-        inp = document.querySelector('input'),
+        inp = document.querySelector('#chatInp'),
         chatDisplay = document.querySelector('.chatDisplay');
 
     function sendMsg(){
