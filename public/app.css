@@ -138,3 +138,6 @@ input::placeholder{
   overflow: hidden;
   border-top-right-radius: 20px;
 }
+#newRoomDiv{
+  font-family: 'Share Tech Mono', monospace;
+}
