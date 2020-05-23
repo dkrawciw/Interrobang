@@ -143,4 +143,6 @@ input::placeholder{
   border: 1px solid #CE0000;
   border-left-color: white;
   text-align: left;
+  padding: 1%;
+  margin: none;
 }
