@@ -135,6 +135,7 @@ input::placeholder{
   margin-top: 40vh;
   height: 60vh;
   overflow: hidden;
+  overflow-y: scroll;
 }
 #newRoomDiv{
   font-family: 'Share Tech Mono', monospace;
