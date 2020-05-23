@@ -108,7 +108,7 @@ app.post('/home/newRoom', isLoggedIn, function(req, res){
     };
     connection.query('INSERT INTO chat_rooms SET ?', q, function(err){
       if(err){
-        connection.end();
+        return 0;
       }
     });
     connection.query('INSERT INTO room_members SET ?', q2);
