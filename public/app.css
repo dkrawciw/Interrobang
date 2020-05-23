@@ -143,8 +143,8 @@ input::placeholder{
 }
 .roomOptions{
   text-align: left;
-  padding: 3%;
   margin: none;
+  width: 100%;
 }
 ::-webkit-scrollbar {
   width: 7px;
