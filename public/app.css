@@ -55,21 +55,17 @@ body{
   background-color: #960000;
 }
 .chatDiv{
-  width: 100%;
+  width: 70%;
   text-align: center;
+  position: fixed;
   height: 10vh;
   margin-top: -10vh;
 }
 .chatInp{
-  background-color: #CE0000;
-  border: none;
-  outline: none;
   padding: 0.7%;
   transition: all 0.3s;
   margin: 0 auto;
-  width: 60%;
   border-radius: 2px;
-  color: #DAE2E5;
 }
 .chatInp:focus{
   border-radius: 12px;
