@@ -110,8 +110,8 @@ app.post('/home/newRoom', isLoggedIn, function(req, res){
       if(err){
         return 0;
       }
+      connection.query('INSERT INTO room_members SET ?', q2);
     });
-    connection.query('INSERT INTO room_members SET ?', q2);
   });
   res.redirect('/home');
 });
