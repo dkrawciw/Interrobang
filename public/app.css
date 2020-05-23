@@ -147,6 +147,7 @@ input::placeholder{
   margin: none;
   width: 100%;
   transition: text-decoration 0.3s ease;
+  border: 0.5px solid #CE0000;
 }
 .roomOptions:hover{
   text-decoration: underline solid;
