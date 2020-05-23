@@ -80,7 +80,6 @@ body{
   padding: 3%;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  min-height: 90vh;
   padding-bottom: 15vh;
 }
 .chatMsg{
