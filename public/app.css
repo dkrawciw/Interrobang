@@ -8,10 +8,10 @@ body{
   background-color: #CE0000;
   padding: 1vh;
   text-align: center;
-  border-bottom-right-radius: 20px;
   height: 40vh;
   box-shadow: 0px 0px 0.5vh black;
   overflow: hidden;
+  font-family: 'Share Tech Mono', monospace;
 }
 .headBtn{
   width: 70%;
@@ -55,28 +55,24 @@ body{
   background-color: #960000;
 }
 .chatDiv{
-  width: 100%;
+  width: 70%;
   text-align: center;
+  position: fixed;
+  margin: auto;
+  padding: 3%;
+  margin-top: 85vh;
+  margin-left: 15%;
   height: 10vh;
-  margin-top: -10vh;
+  z-index: 99;
 }
 .chatInp{
-  background-color: #CE0000;
-  border: none;
-  outline: none;
   padding: 0.7%;
   transition: all 0.3s;
   margin: 0 auto;
-  width: 60%;
   border-radius: 2px;
-  color: #DAE2E5;
 }
 .chatInp:focus{
   border-radius: 12px;
-}
-::placeholder{
-  color: #DAE2E5;
-  opacity: 0.7;
 }
 .chatDisplay{
   width: 70%;
@@ -84,7 +80,6 @@ body{
   padding: 3%;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  min-height: 90vh;
   padding-bottom: 15vh;
 }
 .chatMsg{
@@ -101,6 +96,69 @@ body{
 }
 hr{
   width: 100%;
-  border: 0.5px solid #CE0000;
+  border: 0.5px solid white;
+  background-color: white;
+}
+.newRoomBtn{
+  padding: 1%;
+  width: 10%;
   background-color: #CE0000;
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+.newRoomBtn:hover{
+  cursor: pointer;
+  background-color: #B50000;
+}
+.newRoomBtn:active{
+  background-color: #D8271E;
+}
+#newRoomDiv{
+  margin-left: 1%;
+  display: none;
+  background-color: #3A3A3A;
+  position: absolute;
+  width: 35%;
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0.5vh black;
+}
+input::placeholder{
+  color: #F2F2F2;
+}
+.chatSelectionDiv{
+  position: fixed;
+  width: 15%;
+  background-color: #CE0000;
+  padding: 1vh;
+  text-align: center;
+  margin-top: 40vh;
+  height: 60vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-family: 'Share Tech Mono', monospace;
+}
+#newRoomDiv{
+  font-family: 'Share Tech Mono', monospace;
+}
+.roomOptions{
+  text-decoration: underline solid transparent;
+  text-align: left;
+  margin: none;
+  width: 100%;
+  transition: text-decoration 0.3s ease;
+}
+.roomOptions:hover{
+  text-decoration: underline solid;
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: none;
+}
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
 }

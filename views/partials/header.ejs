@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/logo-border.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/app.css">
@@ -13,7 +14,7 @@
       <button class="btn headBtn" onclick="window.location='/login';">Log In</button>
       <button class="btn headBtn" onclick="window.location='/register';">Sign Up</button>
       <% }else{ %>
-        <h3 style="text-decoration: underline;"><%= currentUser.username %></h3>
+        <h4><%= currentUser.username %></h4>
         <button class="btn headBtn" onclick="window.location='/logout';">Logout</button>
       <% } %>
     </div>

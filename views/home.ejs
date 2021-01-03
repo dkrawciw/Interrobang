@@ -1,27 +1,26 @@
 <%- include("partials/header.ejs") %>
-  <div class="chatDisplay">
+  <div class="chatSelectionDiv">
     <hr>
+    <% for(var x = chatRoom.length - 1; x >= 0; x--){ %>
+      <div class="roomOptions" onclick="window.location='/home/chat/<%= chatRoom[x].room_name %>';">
+        <h4><%= chatRoom[x].room_name %></h4>
+        <hr>
+      </div>
+    <% } %>
   </div>
-  <div class="chatDiv">
-    <form action="#" onsubmit="sendMsg();return false">
-      <input class="chatInp" placeholder="message">
-    </form>
+  <div class="chatDisplay">
+    <img class="newRoomBtn" src="newProjectIcon.png" id="newRoom">
+    <div id="newRoomDiv">
+      <h2>Create New Room</h2>
+      <form action="/home/newRoom" method="POST">
+        <div class="input-group mb-3 input-group-lg">
+          <input type="text" class="form-control"  name="name" aria-label="Recipient's username" aria-describedby="button-addon2" id="rName">
+          <div class="input-group-append">
+            <button class="btn btn-outline-danger" type="submit" id="button-addon2">Create</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script type="text/javascript">
-    var socket = io(),
-        inp = document.querySelector('input'),
-        chatDisplay = document.querySelector('.chatDisplay');
-
-    function sendMsg(){
-      if(inp.value.length != 0){
-        socket.emit('msg', inp.value, '<%= currentUser.username %>');
-        inp.value = "";
-      }
-    }
-    socket.on('msg', function(msg){
-      chatDisplay.innerHTML += "<img src='/userPic.png' class='profilePic'><p class='chatMsg'>" + msg + "</p><br><h6 style='font-size: 10px;'>" + new Date().getMonth() + "/" + new Date().getDate() + "/" + new Date().getFullYear() + " @ " + new Date().getHours() + ":" + new Date().getMinutes() + "</h6><hr>";
-    });
-  </script>
-
+  <script type="text/javascript" src="/newRoom.js"></script>
 <%- include("partials/footer.ejs") %>
